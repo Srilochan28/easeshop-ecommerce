@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase - Customer Login</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #172554, #4f46e5);
+        }
+
+        .login-container {
+            width: 90%;
+            max-width: 420px;
+            background: white;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #172554;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #3730a3;
+        }
+
+        button:disabled {
+            opacity: 0.65;
+            cursor: not-allowed;
+        }
+
+        #loginMessage {
+            margin-top: 16px;
+            text-align: center;
+            font-size: 14px;
+            overflow-wrap: anywhere;
+        }
+
+        .register-link,
+        .store-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #4f46e5;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <h1>🛍️ ShopEase</h1>
+
+        <p class="subtitle">Customer Login</p>
+
+        <form id="customerLoginForm">
+
+            <input
+                type="email"
+                id="customerEmail"
+                placeholder="Enter your email"
+                autocomplete="email"
+                maxlength="150"
+                required
+            >
+
+            <input
+                type="password"
+                id="customerPassword"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                maxlength="128"
+                required
+            >
+
+            <button type="submit" id="customerLoginButton">
+                Login
+            </button>
+
+        </form>
+
+        <div id="customerLoginMessage" role="status"></div>
+
+        <a href="/register.html" class="register-link">
+            Don't have an account? Register
+        </a>
+
+        <a href="/" class="store-link">
+            Back to ShopEase Store
+        </a>
+
+    </div>
+
+    <script src="customer-login.js"></script>
+
+</body>
+</html>
